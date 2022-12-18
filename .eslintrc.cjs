@@ -7,20 +7,25 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:eslint/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
   ],
   overrides: [],
-  parser: '@babel/eslint-parser',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    requireConfigFile: false,
     ecmaFeatures: { jsx: true },
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'react-hooks', 'jsx-a11y', 'prettier'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'react-hooks',
+    'jsx-a11y',
+    'prettier',
+  ],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
@@ -30,6 +35,7 @@ module.exports = {
     'prettier/prettier': 'error',
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
     'react/display-name': 'off',
+    '@typescript-eslint/no-duplicate-imports': 'warn',
   },
   settings: {
     react: { version: 'detect' },
