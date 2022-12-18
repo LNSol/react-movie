@@ -1,0 +1,4 @@
+mode_modules/
+dist/assests/
+build/static/
+*.test.js
