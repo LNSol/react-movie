@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:eslint/recommended', //?
     'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
@@ -19,7 +20,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'react-hooks', 'jsx-a11y', 'prettier'],
+  plugins: ['react', 'react-hooks', 'jsx-a11y', 'prettier'], // 'eslint' ?
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
